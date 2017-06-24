@@ -57,17 +57,6 @@ foreach($headarr as $h){
 	}
 }
 
-function replace_html_path($arrMatche)
-{	
-	$sPath = makeUrl($arrMatche[4]) ;
-	if( strtolower($arrMatche[1])=='img' )
-	{
-		$sPath.= '&bin=1' ;
-	}
-	
-	return "<{$arrMatche[1]} {$arrMatche[2]} {$arrMatche[3]}=\"{$sPath}\"" ;
-}
-
 function get_client_header(){
 	$headers=array();
 	foreach($_SERVER as $k=>$v){
